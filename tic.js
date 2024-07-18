@@ -2,77 +2,83 @@ const cells = document.querySelectorAll('.cell');
 const newButton = document.getElementById('newGame');
 const xScoreVal = document.getElementById('xscore');
 const oScoreVal = document.getElementById('oscore');
+const messageDiv = document.getElementById('message');
 
-let Board = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
-let xScore = 0;
-let oScore = 0;
 let gameActive = true;
 
-const winBoard = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
-];
-
-function clickCell(e) {
-    const cell = e.target;
-    const index = cell.getAttribute('data-index');
-
-    if (Board[index] !== '' || !gameActive) {
-        return;
-    }
-
-    Board[index] = currentPlayer;
-    cell.textContent = currentPlayer;
-
-    if (checkWinner()) {
-        alert(`Player ${currentPlayer} wins`);
-        updateScore(currentPlayer);
-        gameActive = false;
-        return;
-    }
-
-    if (!Board.includes('')) {
-        alert('Game is a draw!');
-        gameActive = false;
-        return;
-    }
-
-    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+function displayMessage(message) {
+    messageDiv.textContent = message;
 }
 
-function checkWinner() {
-    for (let i = 0; i < winBoard.length; i++) {
-        const [a, b, c] = winBoard[i];
-        if (Board[a] && Board[a] === Board[b] && Board[a] === Board[c]) {
-            return true;
+function fetchGameState() {
+    fetch('game.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'action=getState'
+    })
+    .then(response => response.json())
+    .then(data => {
+        data.board.forEach((value, index) => {
+            cells[index].textContent = value;
+        });
+        currentPlayer = data.currentPlayer;
+        xScoreVal.textContent = data.xScore;
+        oScoreVal.textContent = data.oScore;
+        gameActive = data.gameActive;
+        if (!gameActive) {
+            displayMessage('Game Over');
+        } else {
+            displayMessage(`It's ${currentPlayer}'s turn`);
         }
+    });
+}
+
+function makeMove(index) {
+    fetch('game.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `action=move&index=${index}`
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            displayMessage(data.error);
+        } else if (data.winner) {
+            displayMessage(`Player ${data.winner} wins`);
+        } else if (data.draw) {
+            displayMessage('Game is a draw!');
+        } else {
+            fetchGameState();
+        }
+    });
+}
+
+function startNewGame() {
+    fetch('game.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'action=newGame'
+    })
+    .then(response => response.json())
+    .then(() => {
+        fetchGameState();
+    });
+}
+
+cells.forEach(cell => cell.addEventListener('click', (e) => {
+    const index = e.target.getAttribute('data-index');
+    if (gameActive && !e.target.textContent) {
+        makeMove(index);
     }
-    return false;
-}
+}));
 
-function updateScore(player) {
-    if (player === 'X') {
-        xScore++;
-        xScoreVal.textContent = xScore;
-    } else {
-        oScore++;
-        oScoreVal.textContent = oScore;
-    }
-}
+newButton.addEventListener('click', startNewGame);
 
-function newGame() {
-    Board = ['', '', '', '', '', '', '', '', ''];
-    currentPlayer = 'X';
-    gameActive = true;
-    cells.forEach(cell => cell.textContent = '');
-}
-
-cells.forEach(cell => cell.addEventListener('click', clickCell));
-newButton.addEventListener('click', newGame);
+fetchGameState();
