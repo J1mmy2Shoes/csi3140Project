@@ -1,0 +1,38 @@
+html{
+    font-family: "Roboto", sans-serif
+}
+body {
+    background-color: rgb(233, 235, 236);
+}
+.top-level_container{
+    margin-top:16px;
+    position:relative;
+    
+}
+.leftie{
+    float:left;
+    width:33%;
+}
+.rightie{
+    float: right;
+    width: 63%;
+}
+h2{
+    font-size:xx-large;
+    color: darkslategrey;
+}
+h3{
+    font-size: 26px;
+}
+.that-font{
+    color: teal;
+}
+
+.leftie,
+.right-bottom-grid,
+.right-top-grid{
+    margin-top:16px;
+    padding-left: 30px;
+    border-radius: 12px;
+    background-color: aliceblue;
+}

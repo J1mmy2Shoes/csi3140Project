@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User Registration</title>
+	</head>
+	<body>
+		<form action="echo.php" method="post">
+			<p>First Name:</p> 
+			<p><input type="text" name="firstname" value="Your first name"></p> 
+			<p>Last Name:</p> 
+			<p><input type="text" name="lastname" value="Your last name"></p> 
+			<p>Age</p> 
+			<p><input type="text" name="age" value="Your age"></p> 
+			<p> comment </p> 
+			<p>
+				<textarea name="comments" rows="15" cols="20">
+					Your comments
+				</textarea>
+			</p> 
+			 <p>Are you:</p> 
+			<p>
+				<input type="radio" name="areyou" value="male"> Male
+			</p> 	
+			<p>
+				<input type="radio" name="areyou" value="female"> Female
+			</p> 
+			<p>
+				<input type="radio" name="areyou1" value="hermaphrodite"> An hermaphrodite
+			</p> 
+			<p>
+				<input type="radio" name="areyou" value="asexual"> Asexual
+			</p> 	
+			<p><input type="submit" value="Process"></p> 
+		</form>
+	</body>
+</html>

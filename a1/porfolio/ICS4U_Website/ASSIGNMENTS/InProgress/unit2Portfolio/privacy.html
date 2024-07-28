@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Privacy Issues</title>
+</head>
+<body>
+	<div id="main">
+		<span onclick="openNav()">&#9776; Menu</span>
+	</div>
+	<h1>Privacy Issues</h1>
+
+	<img class="img" src="images/privacy.jpg">
+
+	<p id="privacy">
+		This article talks about traditional concepts of privacy, our right to be left alone, and the basic principle that the content of our communications should remain confidential. Today, personal data is collected, created, used, processed, analyzed, shared, transferred, copied, and stored in unprecedented ways and at an extraordinary speed and volume. It is still unclear how this loss of privacy will affect daily life. Privacy laws around the world are outdated and cannot adapt quickly enough to the rapid advancement of technology. A series of high profile scandals in 2018 have ignited the privacy debate and put a spotlight on irresponsible business practices. Because of this, people are now starting to take action while policymakers are taking this debate seriously and exploring a wide range of solutions.
+	</p>
+	<hr>
+	
+	
+	<h2>References</h2>
+	<p id="reference">
+		<a href="https://www.forbes.com/sites/quora/2019/01/15/as-technology-advances-what-will-happen-with-online-privacy/#511c96711c45">Privacy Article</a>
+	</p>
+		
+	
+
+	<div id="mySidenav" class="sidenav">
+  		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  		<a href="index.html">Home</a>
+  		<a href="health.html">Health and Safety</a>
+  		<a href="career.html">Computer Careers</a>
+  		<a href="society.html">Impact on Society</a>
+  		<a href="future.html">Future of Technology</a>
+  		<a href="enviroment.html">Enviroment</a>
+  		<a href="reflection.html">Final Reflection</a>
+	</div>
+
+
+	<script>
+		function openNav() {
+ 			document.getElementById("mySidenav").style.width = "250px";
+ 			document.getElementById("main").style.marginLeft = "250px";
+ 			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+		function closeNav() {
+  			document.getElementById("mySidenav").style.width = "0";
+ 			document.getElementById("main").style.marginLeft= "0";
+  			document.body.style.backgroundColor = "";
+		}
+	</script>
+
+</body>
+</html>

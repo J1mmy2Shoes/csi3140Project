@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Future of Technology</title>
+
+</head>
+<body>
+	<div id="main">
+			<span onclick="openNav()">&#9776; Menu</span>
+	</div>
+
+	<h1>Future of Technology</h1>
+	<img class="img" src="images/jetpack.jpg">
+
+	<h2>Jetpacks in The Near Future</h2>
+	<p>
+		This article discusses how jetpack technology has advanced a great deal. Breakthroughs in the past decade in miniaturization of electronics and the casting of advanced nickel alloys, however, have radically altered key technologies needed for developing practical, useful jetpacks. JetPack Aviation in California expects to have a full-scale prototype ready for initial flight testing by late summer for U.S. Special Operations Command, or SOCOM. The turbine engine-driven device can reach speeds of more than 200 mph and can remain airborne for more than 10 minutes. It burns commonly available Jet-A fuel, which is a high-purity kerosene. In the near future, jetpacks might become a new mode of transportation.
+	</p>
+	<hr>
+
+	<h2>References</h2>
+	<p id="reference">
+		<a href="https://www.stripes.com/news/the-age-of-true-jetpack-flight-is-near-and-special-operations-command-wants-in-on-it-1.565651">Jetpack Article</a>
+	</p>
+
+
+	<div id="mySidenav" class="sidenav">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="index.html">Home</a>
+  			<a href="privacy.html">Privacy Issues</a>
+  			<a href="health.html">Health and Safety</a>
+  			<a href="career.html">Computer Careers</a>
+  			<a href="society.html">Impact on Society</a>
+  			<a href="enviroment.html">Enviroment</a>
+  			<a href="reflection.html">Final Reflection</a>
+		</div>
+
+
+		<script>
+			function openNav() {
+ 				document.getElementById("mySidenav").style.width = "250px";
+ 				document.getElementById("main").style.marginLeft = "250px";
+ 				document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+			}
+			function closeNav() {
+  				document.getElementById("mySidenav").style.width = "0";
+ 				document.getElementById("main").style.marginLeft= "0";
+  				document.body.style.backgroundColor = "";
+			}
+		</script>
+
+</body>
+</html>

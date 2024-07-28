@@ -1,0 +1,145 @@
+/* Styles for the quiz user interface
+Yi Bo, James, Kowan, Howard
+2/25/2020
+Title: styles.css */
+body{
+	overflow-x: hidden;
+	background-image: url("../images/background.png");
+	text-align: center;
+	font-family: 'Metrophobic', sans-serif;
+	margin: 0;
+}
+img{
+	border: solid 2px;
+	margin-bottom: 2%;
+}
+.question{
+	font-size: 200%;
+	padding-top: 2%;
+}
+table{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.quizQuestion{
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 500px;
+	margin-top: 5%;
+	background-color: #F2F3F5;
+	border-radius: 20px;
+	border: solid 2px;
+}
+select{
+	font-family: 'Metrophobic', sans-serif;
+}
+#selQuestion1{
+	width: 20%;
+	font-size: 120%;
+	margin-top: 1%;
+}
+.lblQuestion2{
+	font-size: 110%;
+}
+.lblQuestion3{
+	font-size: 150%;
+}
+#txtQuestion4{
+	margin-top: 2%;
+	width: 25%;
+	height: 30px;
+	font-family: 'Metrophobic', sans-serif;
+	font-size: 130%;
+}
+.selQuestion5{
+	margin-top: 2%;
+	width: 70%;
+	font-size: 110%;
+}
+#txtQuestion6{
+	margin-top: 2%;
+	width: 15%;
+	height: 22px;
+	font-family: 'Metrophobic', sans-serif;
+	font-size: 75%;
+}
+#audQuestion7{
+	z-index: -1;
+}
+#txtQuestion7{
+	margin-top: 2%;
+	width: 25%;
+	height: 30px;
+	font-family: 'Metrophobic', sans-serif;
+	font-size: 130%;
+}
+.lblQuestion8{
+	font-size: 130%;
+
+}
+.selQuestion9{
+	margin-top: 2%;
+	width: 50%;
+	font-size: 140%;
+}
+#btnSubmit{
+	margin-top: 3%;
+	margin-bottom: 2%;
+	height: 150px;
+	width: 20%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 150%;
+	color: white;
+	background-color: #1D91FE;
+}
+#btnSubmit:hover{
+	background-color: #99ceff;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+/* stuff that does thigns. The profile bar 
+containing all of the important user information */
+.divProfileBar{
+	z-index: 999;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	padding: 20px;
+	background-color: black;
+	color: white;
+}
+.tableProfileBar{
+	width: 80%;
+	border-color: white;
+	border-style: solid;
+	padding: 5px;
+}
+/* nav bar styles */
+.cntHeadbar{
+	position: sticky;
+	margin:0;
+	width: 100%;
+	height: 75px;
+	background-color: black;
+}
+.navOption{
+	color: white;
+	display: inline-block;
+	width: 20%;
+}
+.currentPage{
+	font-size: 200%;
+	padding: 15px;
+}
+.pageLink{
+	font-size: 150%;
+	color: white;
+	cursor: pointer;
+	border-style: solid;
+	padding: 10px;
+	margin: 20px;
+}
