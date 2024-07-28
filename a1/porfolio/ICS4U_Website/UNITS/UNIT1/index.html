@@ -1,0 +1,65 @@
+<!-- James Billinger 
+	Feb 5, 2020
+	Unit 1 page
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../../images/icon.png">
+	</head>
+
+	<body>
+		<div id="main">
+			<span onclick="openNav()">&#9776; Menu</span>
+		</div>
+		<title>Unit 1</title>
+		<h1>Unit 1: Programming Concepts</h1>
+
+		<p id="description1">
+			This unit focuses on basic computer and information science skills. Students identify hardware components, research ergonomic considerations, practise file management skills, access resources through local and wide area networks, and research the evolution of programming languages. They develop skills for success in the computer and information science environment. 
+			<br>
+			This unit also focuses on the basic and advanced programming structures learned in the grade 11 computer science course. Students write simple programs, using variable assignment, repetition and decision structures, arrays, functions, algorithms and develop effective testing, validating, and documenting skills. They also explore roles of effective communicators and reflective thinkers when following a problem-solving model (e.g., user inputs a series of marks, each value is validated, the average is calculated, and a grade is assigned).
+
+		</p>
+		<center>
+			<img src="../../images/unit1.jpeg" style="margin-bottom: 50px; margin-top: 10px; border: solid; border-width: 5px; border-color: white; border-radius: 5px;">
+		</center>
+
+		<div class="links">
+			<a href="LESSON1">LESSON 1</a>
+			<br><br><a href="LESSON2">LESSON 2</a>
+			<br><br><a href="LESSON3">LESSON 3</a>
+			<br><br><a href="LESSON4">LESSON 4</a>
+			<br><br><a href="LESSON5">LESSON 5</a>
+			<br><br><a href="LESSON6">LESSON 6</a>
+			<br><br><a href="LESSON7">LESSON 7</a>
+		</div>	
+
+
+		<div id="mySidenav" class="sidenav">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="../../index.html">Homepage</a>
+  			<a href="../UNIT2/index.html">Unit 2</a>
+  			<a href="../UNIT3/index.html">Unit 3</a>
+  			<a href="../UNIT4/index.html">Unit 4</a>
+  			<a href="../UNIT5/index.html">Unit 5</a>
+		</div>
+
+		<script>
+			function openNav() {
+ 				document.getElementById("mySidenav").style.width = "250px";
+ 				document.getElementById("main").style.marginLeft = "250px";
+ 				document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+			}
+			function closeNav() {
+  				document.getElementById("mySidenav").style.width = "0";
+ 				document.getElementById("main").style.marginLeft= "0";
+  				document.body.style.backgroundColor = "white";
+			}
+		</script>
+
+	</body>
+</html>

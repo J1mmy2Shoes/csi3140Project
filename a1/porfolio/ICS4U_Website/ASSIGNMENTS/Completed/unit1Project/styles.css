@@ -1,0 +1,89 @@
+/* Styles for the home and help page
+Yi Bo, James, Kowan, Howard
+2/25/2020
+Title: styles.css */
+body{
+	margin: 0;
+	font-family: 'Metrophobic', sans-serif;
+	background-image: url(images/background.jpg);
+	background-size: cover;
+}
+table,td,th,tr{
+	text-align: center;
+	border-style: solid;
+	padding: 10px;
+	margin: 20px;
+}
+table{
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+}
+p{
+	margin-right: 20%;
+	margin-left: 20%;
+	background-color: white;
+}
+th{
+	font-size: 200%;
+}
+
+body{
+	text-align: center;
+}
+a{
+	text-align: center;
+	text-decoration: none;
+	border-style: solid;
+	padding: 10px;
+	margin: 20px;
+	color: black;
+}
+img{
+	border: solid black;
+}
+.btnSubmit{
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	padding: 5px 50px 5px 50px;
+	transition: 1s ease;
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
+}
+.btnSubmit:hover{
+	background-color: grey;
+	transform: scale(1.1);
+}
+#description{
+	background-color: white;
+	padding-bottom: 2%;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid black;
+}
+/* nav bar styles */
+.cntHeadbar{
+	position: sticky;
+	top: 0;
+	margin:0;
+	width: 100%;
+	height: 75px;
+	background-color: black;
+}
+.navOption{
+	color: white;
+	display: inline-block;
+	width: 20%;
+}
+.currentPage{
+	font-size: 200%;
+	padding: 15px;
+}
+.pageLink{
+	font-size: 150%;
+	color: white;
+	cursor: pointer;
+}

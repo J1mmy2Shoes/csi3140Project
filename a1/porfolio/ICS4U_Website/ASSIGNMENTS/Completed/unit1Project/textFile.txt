@@ -1,0 +1,1127 @@
+<!--login page using PHP to save progress
+Yibo, James, Kowan, Howard
+2/20/2020
+Title: index.html (Login Page) 
+				-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Play The Game!
+		</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	</head>
+	<body>
+		<!-- start of headbar-->
+		<div class="cntHeadbar">
+			<div class="navOption"><a class="pageLink" href="textFile.txt">Text File</a></div>
+			<div class="navOption"><a class="pageLink" style="opacity: 30%;">Home</a></div>
+			<div class="navOption currentPage">Current Page: Home</div>
+			<div class="navOption"><a href="help.html" class="pageLink">Help</a></div>
+		</div>
+		<!--end of headbar-->
+		<div id="description">
+			<h1>Play The Game!</h1>
+			<p>
+				This game is a quiz meant to test your knowledge of Japanese culture, including complex themes, vocabulary, and popular entertainment. To play, Login or Signup <a style="border-style: none; color:blue; width: 0; padding: 0;
+				margin: 0;" href="#login">HERE</a>
+			</p>
+
+			<h2>Features</h2>
+			<div style="width: 30%; margin-left: auto; margin-right: auto;">
+				<ul style="list-style-position: inside; text-align: left;">
+					<li>Tracks Highscores</li>
+					<li>Multiple choice questions</li>
+					<li>Fill in the blank</li>
+					<li>True and False</li>
+					<li>Matching</li>
+					<li>Audio based questions</li>
+				</ul>
+			</div>
+		</div>
+		<!--Login table of stuff that is links to form-->
+		<form method="POST" action="gameStuff/index.php">
+			<table>
+				<tr>
+					<th colspan="2">Login And Play</th>
+				</tr>
+
+				<tr>
+					<td>
+						Username:
+					</td>
+					<td>
+						<input type="text" name="txtLogUsername">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						Password:
+					</td>
+					<td>
+						<input type="password" name="txtLogPassword">
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<input class="btnSubmit" type="Submit" value="Login!">
+					</td>
+				</tr>
+			</table>
+		</form>
+
+		<!-- Sign up table that allows to sign up-->
+		<form method="POST" action="accountSignup.php">
+			<table>
+				<tr>
+					<th colspan="2">No Account?</th>
+				</tr>
+
+				<tr>
+					<td>
+						Username: 
+					</td>
+					<td>
+						<input type="text" name="txtUserName">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						*First Name:
+					</td>
+					<td>
+						<input type="text" name="txtFirstName" required>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						*Last Name:
+					</td>
+					<td>
+						<input type="text" name="txtLastName" required>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						Password:
+					</td>
+					<td>
+						<input type="password" name="txtLoginPassword">
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<input class="btnSubmit" type="submit" value="Create Account!">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
+
+<!--login page using PHP to save progress
+Yibo, James, Kowan, Howard
+2/20/2020
+Title: index.html (Login Page) 
+des: the only purpose of this page is to notify the user that they have entered user credinitials wrong.
+				-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Play The Game!
+		</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	</head>
+	<body>
+		<!-- start of headbar-->
+		<div class="cntHeadbar">
+			<div class="navOption"><a class="pageLink" href="textFile.txt">Text File</a></div>
+			<div class="navOption"><a class="pageLink" style="opacity: 30%;">Home</a></div>
+			<div class="navOption currentPage">Current Page: Home</div>
+			<div class="navOption"><a href="help.html" class="pageLink">Help</a></div>
+		</div>
+		<!--end of headbar-->
+		<div id="description">
+			<h1>Play The Game!</h1>
+			<p>
+				This game is a quiz meant to test your knowledge of Japanese culture, including complex themes, vocabulary, and popular entertainment. To play, Login or Signup <a style="border-style: none; color:blue; width: 0; padding: 0;
+				margin: 0;" href="#login">HERE</a>
+			</p>
+
+			<h2>Features</h2>
+			<div style="width: 30%; margin-left: auto; margin-right: auto;">
+				<ul style="list-style-position: inside; text-align: left;">
+					<li>Multiple choice questions</li>
+					<li>Fill in the blank</li>
+					<li>True and False</li>
+					<li>Matching</li>
+					<li>Audio based questions</li>
+				</ul>
+			</div>
+		</div>
+		<!--Login table of stuff that is links to form-->
+		<form method="POST" action="gameStuff/index.php">
+			<table>
+				<tr>
+					<th colspan="2">Login And Play</th>
+				</tr>
+
+				<tr>
+					<td>
+						Username:
+					</td>
+					<td>
+						<input type="text" name="txtLogUsername">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						Password:
+					</td>
+					<td>
+						<input type="password" name="txtLogPassword">
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						Username Or Password is Incorrect. 
+						<br>
+						Please try again.
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<input class="btnSubmit" type="Submit" value="Login!">
+					</td>
+				</tr>
+			</table>
+		</form>
+
+		<!-- Sign up table that allows to sign up-->
+		<form method="POST" action="accountSignup.php">
+			<table>
+				<tr>
+					<th colspan="2">No Account?</th>
+				</tr>
+
+				<tr>
+					<td>
+						Username: 
+					</td>
+					<td>
+						<input type="text" name="txtUserName">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						*First Name:
+					</td>
+					<td>
+						<input type="text" name="txtFirstName" required>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						*Last Name:
+					</td>
+					<td>
+						<input type="text" name="txtLastName" required>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						Password:
+					</td>
+					<td>
+						<input type="password" name="txtLoginPassword">
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<input class="btnSubmit" type="submit" value="Create Account!">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
+
+<!--HTML for the help page, also contains screenshots
+Yi Bo, James, Kowan, Howard
+2/25/2020
+Title: help.html -->
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Help Page</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	</head>
+	<body>
+		<!-- start of headbar-->
+		<div class="cntHeadbar">
+			<div class="navOption"><a href="index.html" class="pageLink">Home</a></div>
+			<div class="navOption currentPage">Current Page: Home</div>
+			<div class="navOption"><a href="help.html" class="pageLink" style="opacity: 30%;">Help</a></div>
+		</div>
+		<!--end of headbar-->
+		<!-- description and screenshots-->
+		<div id="description">
+			<h2>Getting Started</h2>
+			<p id="helping">
+				Once you open the quiz file, the first thing you will see is a login page. This is where you will login to your own specific account to take the online quiz.
+			</p>
+			<img src="images/screenshot1.png" width="250">
+			<h2>Creating an account</h2>
+			<p>
+				If you do not already posses an account, you will need to create one first. Creating an account is as simple as entering a username and password of your choice and clicking the "Create Account!" button. Once your account is created, you will now be able to login.
+			</p>
+			<img src="images/screenshot2.png" width="250">
+			<h2>Taking the quiz</h2>
+			<p>
+				Once you have successfully logged in, you can now begin taking the quiz. Please ensure that you fill out every box and answer every question.
+			</p>
+			<h2>Finishing the quiz</h2>
+			<p>
+				Once you believe that you have finished, take a few minutes to review your answers. After you are satisfied, click the large "Submit" button to display your score.
+			</p>
+			<img src="images/screenshot3.png" width="250">
+		</div>
+	</body>
+</html>
+
+/* Styles for the home and help page
+Yi Bo, James, Kowan, Howard
+2/25/2020
+Title: styles.css */
+body{
+	margin: 0;
+	font-family: 'Metrophobic', sans-serif;
+	background-image: url(images/background.jpg);
+	background-size: cover;
+}
+table,td,th,tr{
+	text-align: center;
+	border-style: solid;
+	padding: 10px;
+	margin: 20px;
+}
+table{
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+}
+p{
+	margin-right: 20%;
+	margin-left: 20%;
+	background-color: white;
+}
+th{
+	font-size: 200%;
+}
+
+body{
+	text-align: center;
+}
+a{
+	text-align: center;
+	text-decoration: none;
+	border-style: solid;
+	padding: 10px;
+	margin: 20px;
+	color: black;
+}
+img{
+	border: solid black;
+}
+.btnSubmit{
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	padding: 5px 50px 5px 50px;
+	transition: 1s ease;
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
+}
+.btnSubmit:hover{
+	background-color: grey;
+	transform: scale(1.1);
+}
+#description{
+	background-color: white;
+	padding-bottom: 2%;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid black;
+}
+/* nav bar styles */
+.cntHeadbar{
+	position: sticky;
+	top: 0;
+	margin:0;
+	width: 100%;
+	height: 75px;
+	background-color: black;
+}
+.navOption{
+	color: white;
+	display: inline-block;
+	width: 20%;
+}
+.currentPage{
+	font-size: 200%;
+	padding: 15px;
+}
+.pageLink{
+	font-size: 150%;
+	color: white;
+	cursor: pointer;
+}
+
+<!--HTML and PHP for the quiz user interface
+Yi Bo, James, Kowan, Howard
+2/20/2020
+Title: index.php -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Quiz</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//used to name the select boxes
+				for(i=9;i<13;i++){
+					createSelectQuestion(i);
+				}
+				function createSelectQuestion(x){
+					//for some reason, the quotes don't close unless they are all on the same line, hence this large block of text
+					//all this does is create select boxes
+					$("#selQuestionTd").append('<td><select class="selQuestion9" name="q'+x+'"><option></option><option>Shounen</option><option>Seinen</option><option>Sci-Fi</option><option>Fantasy</option></select></td>')
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<?php
+			error_reporting(0);
+			session_start();
+			//data saved as follows:
+			//Username FirstName LastName Password highscore
+
+			//function to clear current user info
+			function clearUser(){
+				$_SESSION['currentUser']="";
+				$_SESSION['passwordAccepted']="";
+			}
+
+			$_SESSION['userName']=$_POST['txtLogUsername'];
+			$_SESSION['password']=$_POST['txtLogPassword'];
+
+			//check to see if users are aready logged in
+			if($_SESSION['currentUser']!=""){
+				$_SESSION['userName']=$_SESSION['currentUser'];
+			}
+
+			if($_SESSION['passwordAccepted']!=""){
+				$_SESSION['password']=$_SESSION['passwordAccepted'];
+			}
+		
+			//user stats
+			$_SESSION['highscore']=0;
+			$currentProgress;
+			//switch to decide if user valid
+			$exists=false;
+			//get array of possible users
+			$possibleUsers=file_get_contents("../userReg.txt");
+			$possibleUsers=explode("\r\n",$possibleUsers);
+
+			for ($i=0; $i < count($possibleUsers)-1; $i++) {
+				$logAttempt=explode(" ", $possibleUsers[$i]);
+
+				if(strcasecmp($_SESSION['userName'], $logAttempt[0])==0) {	
+					$exists=true;		
+
+					if($_SESSION['password']==$logAttempt[3]){
+						$_SESSION['userName']=$logAttempt[0];
+						$_SESSION['highscore']=$logAttempt[4];
+					}	
+
+					else{
+						header("Location: ../indexCheat.html");
+					}	
+				}
+
+				$newPossibleUsers=array();
+				array_push($newPossibleUsers, $possibleUsers[$i]."\r\n");
+			}
+
+			if(!$exists){
+				header("Location: ../indexCheat.html");
+			}
+		?>
+		<div class="divProfileBar">
+			<table class="tableProfileBar">
+				<tr>
+					<th>
+						Logged In As:
+						<br>
+						<?php echo $_SESSION['userName']?>
+					</th>
+					<th>
+						Highest Score:
+						<br>
+						<?php echo $_SESSION['highscore']?>/10
+					</th>
+					<th>
+						<a href="../index.html">Logout</a>
+					</th>
+				</tr>
+			</table>
+		</div>
+
+		<!-- start of headbar-->
+		<div class="cntHeadbar">
+			<div class="navOption"><a onlcick=""<?php clearUser();?> href="../index.html" class="pageLink">Home</a></div>
+			<div class="navOption currentPage">Current Page: The Quiz</div>
+			<div class="navOption"><a href="../help.html" class="pageLink">Help</a></div>
+		</div>
+		<!--end of headbar-->
+		<form method="POST" action="process.php" id="questions">
+			<!--table to make styles easy-->
+			<!-- Question 1 -->
+			<div class="quizQuestion">
+				<table>
+					<h1 class="question">Question 1: How important is friendship to Gon and Killua on a scale of 1-10?</h1>
+					<img src="../images/question1.jpg" width="500">
+					<br>
+					<tr>
+						<select name="q1" id="selQuestion1">
+							<option></option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+						</select>
+					</tr>
+				</table>
+			</div>
+			<!-- Question 2 -->
+			<!-- ******* picture question ******* -->
+			<div class="quizQuestion" style="height: 550px;">
+				<table>
+					<h1 class="question">Question 2: Who is this character?</h1>
+					<img src="../images/question2.jpg" height="325">
+					<tr>
+						<td>
+							<input type="radio" name="q2" value="Izaya Orihara">
+							<label class="lblQuestion2">Izaya Orihara</label>
+						</td>
+						<td>
+							<input type="radio" name="q2" value="Hiroshi Kamiya">
+							<lable class="lblQuestion2">Hiroshi Kamiya</label>
+							
+						</td>
+						<td>
+							<input type="radio" name="q2" value="Koyomi Araragi">
+							<lable class="lblQuestion2">Koyomi Araragi</label>
+						</td>
+						<td>
+							<input type="radio" name="q2" value="Kazuto Kirigaya">
+							<lable class="lblQuestion2">Kazuto Kirigaya</label>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Question 3 -->
+			<!-- ******* true or false question ******* -->
+			<div class="quizQuestion">
+				<table>
+					<h1 class="question">Question 3: All anime comes from China.</h1>
+					<img src="../images/question3.jpg" width="400">
+					<tr>
+						<td>
+							<input type="radio" name="q3" value="true">
+							<label class="lblQuestion3" style="color: green;"><b>True</b></label>
+						</td>
+						<td>
+							<input type="radio" name="q3" value="false">
+							<label class="lblQuestion3" style="color: red;"><b>False</b></label>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Question 4 -->
+			<!-- ******* one word answer question ******* -->
+			<div class="quizQuestion">
+				<table>
+					<h1 class="question">Question 4: A person who is radically obsessed with Japanese culture is called...</h1>
+					<img src="../images/question4.jpg" width="400">
+					<tr>
+						<td>
+							<input type="text" name="q4" id="txtQuestion4">
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Question 5 -->
+			<div class="quizQuestion" style="height: 550px">
+				<table>
+					<h1 class="question">Question 5: Which anime has more episodes?</h1>
+					<tr>
+						<td>
+							<h3><u>Bleach</u></h3>
+							<img src="../images/question5_1.jpg" height="325">
+							<br>
+							<input type="radio" name="q5" value="Bleach">
+						</td>
+						<td>
+							<h3><u>Gintama</u></h3>
+							<img src="../images/question5_2.jpg" height="325">
+							<br>
+							<input type="radio" name="q5" value="Gintama">
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Question 6 -->
+			<!-- ******* fill in the blank question ******* -->
+			<div class="quizQuestion">
+				<table>
+					<h1 class="question">Question 6: Fill in the Blank:</h1>
+					<tr>
+						<td>
+							<img src="../images/question6.jpg" width="290">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>Kono <input type="text" name="q6" id="txtQuestion6"> da!</h2>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Question 7 -->
+			<div class="quizQuestion">
+				<table>
+					<h1 class="question">Question 7: What anime is this opening from?</h1>
+					<tr>
+						<td>
+							<audio controls>
+								<source src="../audio/opening.mp3" type="audio/mpeg" id="audQuestion7">
+							</audio>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="../images/question7.gif" height="200">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" name="q7" id="txtQuestion7">
+						</td>
+					</tr>
+					
+				</table>
+			</div>
+			<!-- Question 8 -->
+			<!-- ******* multiple choice question ******* -->
+			<div class="quizQuestion">
+				<table>
+					<h1 class="question">Question 8: How many episodes are in Naruto Shippuden?</h1>
+					<img src="../images/question8.jpg" width="200">
+					<tr>
+						<td>
+							<input type="radio" name="q8" value="12">
+							<label class="lblQuestion8">12</label>
+						</td>
+						<td>
+							<input type="radio" name="q8" value="24">
+							<label class="lblQuestion8">24</label>
+						</td>
+						<td>
+							<input type="radio" name="q8" value="367">
+							<label class="lblQuestion8">367</label>
+						</td>
+						<td>
+							<input type="radio" name="q8" value="500">
+							<label class="lblQuestion8" value="3">500</label>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Question 9 -->
+			<div class="quizQuestion" style="height: 650px;">
+				<table>
+					<h1 class="question">Question 9: Match the anime with the genre</h1>
+					<tr>
+						<td>
+							<h3><u>A) Tokyo Ghoul</u></h3>
+							<img src="../images/question9_1.jpg" height="325">
+						</td>
+						<td>
+							<h3><u>B) Steins Gate</u></h3>
+							<img src="../images/question9_2.jpg" height="325">
+						</td>
+						<td>
+							<h3><u>C) Re Zero</u></h3>
+							<img src="../images/question9_3.jpg" height="325">
+						</td>
+						<td>
+							<h3><u>D) My Hero Academia</u></h3>
+							<img src="../images/question9_4.jpg" height="325">
+						</td>
+					</tr>
+					<tr id="selQuestionTd">
+						<!--This area is filled using a function-->
+					</tr>
+				</table>
+			</div>
+			<!-- Question 10 -->
+     		<div class="quizQuestion" style="height: 600px;">
+				<table>
+					<h1 class="question">Question 10: Match the characters with their names</h1>
+					<tr>
+						<td>
+							<h3>A)</h3>
+							<img src="../images/question10_1.jpg" height="325">
+						</td>
+						<td>
+							<h3>B)</h3>
+							<img src="../images/question10_2.jpg" height="325">
+						</td>
+						<td>
+							<h3>C)</h3>
+							<img src="../images/question10_3.jpg" height="325">
+						</td>
+						<td>
+							<h3>D)</h3>
+							<img src="../images/question10_4.jpg" height="325">
+						</td>
+					</tr>
+					<tr>
+						<td>							
+							<select name="q13" class="selQuestion5">
+								<option></option>
+								<option>Rin Okumura</option>
+								<option>Mugen</option>
+								<option>Natsu Dragneel</option>
+								<option>Kamina</option>
+							</select>
+						</td>
+						<td>
+							<select name="q14" class="selQuestion5">
+								<option></option>
+								<option>Rin Okumura</option>
+								<option>Mugen</option>
+								<option>Natsu Dragneel</option>
+								<option>Kamina</option>
+							</select>
+						</td>
+						<td>
+							<select name="q15" class="selQuestion5">
+								<option></option>
+								<option>Rin Okumura</option>
+								<option>Mugen</option>
+								<option>Natsu Dragneel</option>
+								<option>Kamina</option>
+							</select>
+						</td>
+						<td>
+							<select name="q16" class="selQuestion5">
+								<option></option>
+								<option>Rin Okumura</option>
+								<option>Mugen</option>
+								<option>Natsu Dragneel</option>
+								<option>Kamina</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<input type="submit" name="submit" id="btnSubmit">
+		</form>	
+	</body>
+</html>
+
+<!--HTML and PHP for the results page
+Yi Bo, James, Kowan, Howard
+2/25/2020
+Title: process.php -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<title>
+			Results
+		</title>
+	</head>
+	<body>
+		<div class="divProfileBar">
+			<table class="tableProfileBar">
+				<tr>
+					<th>
+						Logged In As:
+						<br>
+						<?php 
+						session_start();
+						echo $_SESSION['userName']?>
+					</th>
+					<th>
+						Highest Score:
+						<br>
+						<?php echo $_SESSION['highscore']?>/10
+					</th>
+					<th>
+						<a href="../index.html">Logout</a>
+					</th>
+				</tr>
+			</table>
+		</div>
+		<!-- start of headbar-->
+		<div class="cntHeadbar">
+			<div class="navOption"><a onclick="<?php clearUser();?>" href="../index.html" class="pageLink">Home</a></div>
+			<div class="navOption currentPage">Current Page: Results</div>
+			<div class="navOption"><a href="../help.html" class="pageLink">Help</a></div>
+		</div>
+		<!--end of headbar-->
+		<!-- php -->
+		<?php
+			//turns off error reporting so when user doesn't enter a value, it shows what i want to say instead of error message
+			error_reporting(0);
+			//$_answer is an array that countains all answers of the questions
+			//If you want to add more questions and answers, just add more variables to the array
+			$_answers=[/*Q1*/"10",/*Q2*/"koyomi araragi",/*Q3*/"false",/*Q4*/"weeb",/*Q5*/"gintama",/*Q6*/"dio",/*Q7*/"bleach",/*Q8*/"500",/*Q9*/"seinen",/*Q10*/"sci-fi",/*Q11*/"fantasy",/*Q12*/"shounen",/*Q13*/"natsu dragneel",/*Q14*/"kamina",/*Q15*/"rin okumura",/*Q16*/"mugen"];
+			//counter is used increase what question to check. Transitions checking question 1 to question 2
+			$_counter="1";
+			$_correct=0;
+			$_wrong=0;
+			$_matchingCorrect=0;
+			$_matchingCorrect2=0;
+			//When you do the question wrong, it won't say you did questiion 13 wrong, as in the third option of the matching question. It will just say the matching question number
+			$_matchingCounter=0;
+			$_empty=[];
+			//In the for loop, I change "q1" to "q2"
+			$question="q1";
+			$playerValue=$_POST[$question];
+			$allPlayerValue=[];
+			//used for checking which matching question it is
+			$_matchingLetter=["a","b","c","d"];
+			/********************************
+			*Checking how many questions I did correctly*
+			********************************/
+			//For loop checks if question equals the answer
+			for ($i=0; $i < sizeof($_answers); $i++) { 
+				if ($playerValue==null) {
+					//this array gets filled up with the questions that player doesnt do
+					array_push($_empty, $_counter);
+				}
+				//converts to lowercase incase player enters uppercase
+				/****************************
+				*use of string function*
+				*****************************/
+				$playerValue=strtolower("$playerValue");
+				//Used for the matching question
+				if ($question=="q9" || $question=="q10" || $question=="q11" || $question=="q12") {
+					if ($_answers[$i]==$playerValue) {
+						$_matchingCorrect++;
+					}
+					if ($_matchingCorrect==4) {
+						$_correct++;
+					}
+				}
+				//2nd matching question
+				else if ($question=="q13" || $question=="q14" || $question=="q15" || $question=="q16") {
+					if ($_answers[$i]==$playerValue) {
+						$_matchingCorrect2++;
+					}
+					if ($_matchingCorrect2==4) {
+						$_correct++;
+					}
+				}
+				else if ($_answers[$i]==$playerValue) {
+					$_correct++;
+				}
+				$_counter++;
+				//this makes question into the next question, then 2 lines down the player value gets updated with the new question
+				$question="q".$_counter;
+				//saving all player values for when I check answers
+				array_push($allPlayerValue, $playerValue);
+				$playerValue=$_POST[$question];
+			}
+			//subtract 6 because matching questions need 3 more array values each
+			$_wrong=sizeof($_answers)- 6 - $_correct;
+			echo "<h1 style='color: white;'><u>You got $_correct correct and $_wrong wrong</u><br><br></h1>";
+			//since the matching question is 4 questions, I have to make part b,c,d all the same question e.g question 9b would be called q10 but i still have to display 9
+			for ($i=0; $i < sizeof($_answers); $i++) { 
+				if ($_answers[$i]!=$allPlayerValue[$i]) {
+					$_questionWrong=$i+1;
+					if ($_questionWrong>8 && $_questionWrong<13) {
+						$_questionWrong="9".$_matchingLetter[$_questionWrong-9];
+					}
+					else if ($_questionWrong>12) {
+						$_questionWrong="10".$_matchingLetter[$_questionWrong-13];
+					}
+					echo "<span style='color: white; font-size: 100%;'>For question $_questionWrong, you entered \"$allPlayerValue[$i]\", but the answer was \"$_answers[$i]\" <br><br></span>";
+				}
+			}			
+			/********************************
+			*Checking how many questions I did not do*
+			********************************/
+			if (sizeof($_empty)!=0) {
+				echo "<span style='color: white; font-size: 200%;'>You did not answer question </span>";
+			}
+			for ($i=0; $i < sizeof($_empty); $i++) { 
+				if ($_empty[$i]>=9 && $_empty[$i]<=12) {
+					if ($i==0) {
+						echo "<span style='color: white; font-size: 200%;'> 9</span>";
+					}
+					else if ($_empty[sizeof($_empty)-1]<13) {
+						echo "<span style='color: white; font-size: 200%;'>, and 9</span>";
+					}
+					else{
+						echo "<span style='color: white; font-size: 200%;'>, 9</span>";	
+					}
+				}
+				if ($_empty[$i]>=9) {
+					break;
+				}
+				if ($i==0) {
+					echo "<span style='color: white; font-size: 200%;'>$_empty[$i]</span>";
+				}
+				else if ($i!=sizeof($_empty)-1) {
+					echo "<span style='color: white; font-size: 200%;'>, $_empty[$i]</span>";
+				}
+				else{
+					echo "<span style='color: white; font-size: 200%;'>, and $_empty[$i]</span>";
+				}
+				/*}*/
+				//if the last value of $_empty is greater than 9, that means player didn't fill in question 10 fully
+				//Checking if the last value of the array is question 10, since q13-16 or something is question ten
+				//This is needed because its a matching question
+			}
+			if ($_empty[sizeof($_empty)-1]>12 && sizeof($_empty)!=1) {
+				echo "<span style='color: white; font-size: 200%;'>, and 10</span>";	
+			}
+
+			//this is where high scores are updated
+			$possibleUsers=explode("\r\n",file_get_contents('../userReg.txt'));
+			//since every player is now stored, wipe the file containing everyone
+			file_put_contents("../userReg.txt", "");
+			$newInfo=array();
+
+			/********************************
+			*USE OF SELECTION AND REPITITION*
+			********************************/
+			for($i=0;$i<sizeof($possibleUsers)-1; $i++){
+				$lineInfo=explode(" ", $possibleUsers[$i]);
+
+				if($lineInfo[0]==$_SESSION['userName'] && $lineInfo[4]<$_correct){
+					$lineInfo[4]=$_correct;
+					$lineInfo=implode(" ", $lineInfo)."\r\n";
+					$newInfo=array_push($newInfo, $lineInfo);
+					file_put_contents("../userReg.txt", $lineInfo, FILE_APPEND);
+				}
+
+				else{
+					$insertPlayer=$possibleUsers[$i]."\r\n";
+					file_put_contents("../userReg.txt", $insertPlayer, FILE_APPEND);
+				}
+			}
+
+			//this makes index.php not send to signin page and is invoked whenever home is clicked
+			/******************use of custom function**********************/
+			function clearUser(){
+				$_SESSION['currentUser']="";
+				$_SESSION['passwordAccepted']="";
+			}
+		?>
+		<br>
+		<br>
+		<a href="index.php" style="padding: 10px 15px 10px 15px; border-style: solid; color: white;">Play Again!</a>
+	</body>
+</html>
+
+/* Styles for the quiz user interface
+Yi Bo, James, Kowan, Howard
+2/25/2020
+Title: styles.css */
+body{
+	overflow-x: hidden;
+	background-image: url("../images/background.png");
+	text-align: center;
+	font-family: 'Metrophobic', sans-serif;
+	margin: 0;
+}
+img{
+	border: solid 2px;
+	margin-bottom: 2%;
+}
+.question{
+	font-size: 200%;
+	padding-top: 2%;
+}
+table{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.quizQuestion{
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 500px;
+	margin-top: 5%;
+	background-color: #F2F3F5;
+	border-radius: 20px;
+	border: solid 2px;
+}
+select{
+	font-family: 'Metrophobic', sans-serif;
+}
+#selQuestion1{
+	width: 20%;
+	font-size: 120%;
+	margin-top: 1%;
+}
+.lblQuestion2{
+	font-size: 110%;
+}
+.lblQuestion3{
+	font-size: 150%;
+}
+#txtQuestion4{
+	margin-top: 2%;
+	width: 25%;
+	height: 30px;
+	font-family: 'Metrophobic', sans-serif;
+	font-size: 130%;
+}
+.selQuestion5{
+	margin-top: 2%;
+	width: 70%;
+	font-size: 110%;
+}
+#txtQuestion6{
+	margin-top: 2%;
+	width: 15%;
+	height: 22px;
+	font-family: 'Metrophobic', sans-serif;
+	font-size: 75%;
+}
+#audQuestion7{
+	z-index: -1;
+}
+#txtQuestion7{
+	margin-top: 2%;
+	width: 25%;
+	height: 30px;
+	font-family: 'Metrophobic', sans-serif;
+	font-size: 130%;
+}
+.lblQuestion8{
+	font-size: 130%;
+
+}
+.selQuestion9{
+	margin-top: 2%;
+	width: 50%;
+	font-size: 140%;
+}
+#btnSubmit{
+	margin-top: 3%;
+	margin-bottom: 2%;
+	height: 150px;
+	width: 20%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 150%;
+	color: white;
+	background-color: #1D91FE;
+}
+#btnSubmit:hover{
+	background-color: #99ceff;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+/* stuff that does thigns. The profile bar 
+containing all of the important user information */
+.divProfileBar{
+	z-index: 999;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	padding: 20px;
+	background-color: black;
+	color: white;
+}
+.tableProfileBar{
+	width: 80%;
+	border-color: white;
+	border-style: solid;
+	padding: 5px;
+}
+/* nav bar styles */
+.cntHeadbar{
+	position: sticky;
+	margin:0;
+	width: 100%;
+	height: 75px;
+	background-color: black;
+}
+.navOption{
+	color: white;
+	display: inline-block;
+	width: 20%;
+}
+.currentPage{
+	font-size: 200%;
+	padding: 15px;
+}
+.pageLink{
+	font-size: 150%;
+	color: white;
+	cursor: pointer;
+	border-style: solid;
+	padding: 10px;
+	margin: 20px;
+}

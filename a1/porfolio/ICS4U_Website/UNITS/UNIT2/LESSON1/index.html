@@ -1,0 +1,55 @@
+<!--Hompage of my Unit 2 Project
+James Billinger
+3/7/2020
+Title: index.html 
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<title>
+			James's Online Portfolio Assignment
+		</title>
+		<font size="+2">
+	</head>
+	<body>
+		<div id="main">
+			<span onclick="openNav()">&#9776; Menu</span>
+		</div>
+		<div id="header">
+			<h1>Portfolio Project</h1>
+			<h2>By James Billinger</h2>
+			<h4>ICS4U</h4>
+		</div>
+		<img class="img" src="images/code.gif">
+
+			
+		
+		<div id="mySidenav" class="sidenav">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="privacy.html">Privacy Issues</a>
+  			<a href="health.html">Health and Safety</a>
+  			<a href="career.html">Computer Careers</a>
+  			<a href="society.html">Impact on Society</a>
+  			<a href="future.html">Future of Technology</a>
+  			<a href="enviroment.html">Enviroment</a>
+  			<a href="reflection.html">Final Reflection</a>
+		</div>
+
+
+		<script>
+			function openNav() {
+ 				document.getElementById("mySidenav").style.width = "250px";
+ 				document.getElementById("main").style.marginLeft = "250px";
+ 				document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+			}
+			function closeNav() {
+  				document.getElementById("mySidenav").style.width = "0";
+ 				document.getElementById("main").style.marginLeft= "0";
+  				document.body.style.backgroundColor = "";
+			}
+		</script>
+	</body>
+</html>

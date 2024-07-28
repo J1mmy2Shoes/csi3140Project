@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Final Reflection</title>
+
+</head>
+<body>
+	<div id="main">
+			<span onclick="openNav()">&#9776; Menu</span>
+	</div>
+
+	<h1>Final Reflection</h1>
+	<img class="img" src="images/mirror.jpg">
+	<p>
+		To finish off this project, computer science is a rapidly expanding field with a great many job options. Technology is becoming more advanced every year, as well as our depedence on it. Jetpacks are a good example of how something that was once thought to be impossible is now close to becoming a reality. Hopefully, technology can advance to a point where it can solve our enviromental problems by cleaning up trash with a revolutionary app. Becsaue of all this, computer science is an amaxing field with many job prospects and opportunities to make a difference in the world.
+	</p>
+
+
+	<div id="mySidenav" class="sidenav">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="index.html">Home</a>
+  			<a href="privacy.html">Privacy Issues</a>
+  			<a href="health.html">Health and Safety</a>
+  			<a href="career.html">Computer Careers</a>
+  			<a href="society.html">Impact on Society</a>
+  			<a href="future.html">Future of Technology</a>
+  			<a href="enviroment.html">Enviroment</a>
+		</div>
+
+
+		<script>
+			function openNav() {
+ 				document.getElementById("mySidenav").style.width = "250px";
+ 				document.getElementById("main").style.marginLeft = "250px";
+ 				document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+			}
+			function closeNav() {
+  				document.getElementById("mySidenav").style.width = "0";
+ 				document.getElementById("main").style.marginLeft= "0";
+  				document.body.style.backgroundColor = "";
+			}
+		</script>
+
+</body>
+</html>

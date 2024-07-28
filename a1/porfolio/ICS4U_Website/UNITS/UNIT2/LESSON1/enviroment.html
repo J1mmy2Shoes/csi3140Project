@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Enviroment</title>
+
+</head>
+<body>
+	<div id="main">
+			<span onclick="openNav()">&#9776; Menu</span>
+	</div>
+
+	<h1>Computers And The Enviroment</h1>
+	<img class="img" src="images/enviroment.jpg">
+	<hr>
+
+	<P>
+		My billion dollar idea to clean up trash and fix pollution is called TrashCoin. This will be an app for smartphones that will reward people with cryptocurrency when they deposit trash in Trashcoin disposal bins that will be placed across the country. As trash is placed in the bin, it will scan the trash and verify that garbage has been deposited. Once the trash is trown out the bin will pair to the users smartphone with bluetooth technology. The location of these disposal bins will be easilly accesible with the GPS on most smartphones. With this reveloutinary idea, people will be incentivised to throw out not only their own trash, but random litter as well in order to make more of the TrashCoin cryptocurrency. The user interface will be a simple map of the area showing where the trash cans are as well as a button that will begin the bluetooth pairing proccess to verify transactions.
+	</P>	
+	<center>
+		<img src="images/trash.jpg"><img src="images/trashcan.jpg" style="width: 42.5%;">
+
+	</center>
+		
+
+
+	<div id="mySidenav" class="sidenav">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="index.html">Home</a>
+  			<a href="privacy.html">Privacy Issues</a>
+  			<a href="health.html">Health and Safety</a>
+  			<a href="career.html">Computer Careers</a>
+  			<a href="society.html">Impact on Society</a>
+  			<a href="future.html">Future of Technology</a>
+  			<a href="reflection.html">Final Reflection</a>
+		</div>
+
+
+		<script>
+			function openNav() {
+ 				document.getElementById("mySidenav").style.width = "250px";
+ 				document.getElementById("main").style.marginLeft = "250px";
+ 				document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+			}
+			function closeNav() {
+  				document.getElementById("mySidenav").style.width = "0";
+ 				document.getElementById("main").style.marginLeft= "0";
+  				document.body.style.backgroundColor = "";
+			}
+		</script>
+
+</body>
+</html>

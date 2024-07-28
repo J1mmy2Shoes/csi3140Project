@@ -1,0 +1,75 @@
+<!-- James Billinger 
+	Feb 5, 2020
+	Registration Page
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../../styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../../images/icon.png">
+		<title>FILE IO</title>
+	</head>
+	<body id="register">
+		<div id="main">
+			<span onclick="openNav()">&#9776; Menu</span>
+		</div>
+		<h1>Reading and Writing in PHP</h1>
+		<h2>Registration:</h2>
+		<form method="POST" action="process.php">
+			Your name:
+			<input type="text" name="txtName">
+			<br>
+			Your Age:
+			<select name="selAge">
+				<option>14</option>
+				<option>15</option>
+				<option>16</option>
+				<option>17</option>
+				<option>18</option>
+				<option>19</option>
+			</select>
+			<br>
+			<input type="submit" value="Submit">
+		</form>
+		
+		<h2>See past Registrations</h2>
+		<form method="POST" action="process2.php">
+			<input type="submit" value="Get Past Info">
+			
+		</form>
+
+		<h2>Login:</h2>
+		<form method="POST" action="process3.php">
+			Your name:<input type="text" name="txtName"><br>
+			Your age:<input type="text" name="txtAge"><br>
+			<input type="submit" value="LOGIN">
+		</form>
+
+		<div id="mySidenav" class="sidenav">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="../../../index.html">Homepage</a>
+  			<a href="../../UNIT2/index.html">Unit 1</a>
+  			<a href="../../UNIT2/index.html">Unit 2</a>
+  			<a href="../../UNIT3/index.html">Unit 3</a>
+  			<a href="../../UNIT4/index.html">Unit 4</a>
+  			<a href="../../UNIT5/index.html">Unit 5</a>
+		</div>
+
+		<script>
+			function openNav() {
+ 				document.getElementById("mySidenav").style.width = "250px";
+ 				document.getElementById("main").style.marginLeft = "250px";
+ 				document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+			}
+			function closeNav() {
+  				document.getElementById("mySidenav").style.width = "0";
+ 				document.getElementById("main").style.marginLeft= "0";
+  				document.body.style.backgroundColor = "white";
+			}
+		</script>
+
+
+	</body>
+</html>

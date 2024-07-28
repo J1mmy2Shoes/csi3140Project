@@ -1,0 +1,129 @@
+<!--login page using PHP to save progress
+Yibo, James, Kowan, Howard
+2/20/2020
+Title: index.html (Login Page) 
+				-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Play The Game!
+		</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	</head>
+	<body>
+		<!-- start of headbar-->
+		<div class="cntHeadbar">
+			<div class="navOption"><a class="pageLink" href="textFile.txt">Text File</a></div>
+			<div class="navOption"><a class="pageLink" style="opacity: 30%;">Home</a></div>
+			<div class="navOption currentPage">Current Page: Home</div>
+			<div class="navOption"><a href="help.html" class="pageLink">Help</a></div>
+		</div>
+		<!--end of headbar-->
+		<div id="description">
+			<h1>Play The Game!</h1>
+			<p>
+				This game is a quiz meant to test your knowledge of Japanese culture, including complex themes, vocabulary, and popular entertainment. To play, Login or Signup <a style="border-style: none; color:blue; width: 0; padding: 0;
+				margin: 0;" href="#login">HERE</a>
+			</p>
+
+			<h2>Features</h2>
+			<div style="width: 30%; margin-left: auto; margin-right: auto;">
+				<ul style="list-style-position: inside; text-align: left;">
+					<li>Tracks Highscores</li>
+					<li>Multiple choice questions</li>
+					<li>Fill in the blank</li>
+					<li>True and False</li>
+					<li>Matching</li>
+					<li>Audio based questions</li>
+				</ul>
+			</div>
+		</div>
+		<!--Login table of stuff that is links to form-->
+		<form method="POST" action="gameStuff/index.php">
+			<table>
+				<tr>
+					<th colspan="2">Login And Play</th>
+				</tr>
+
+				<tr>
+					<td>
+						Username:
+					</td>
+					<td>
+						<input type="text" name="txtLogUsername">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						Password:
+					</td>
+					<td>
+						<input type="password" name="txtLogPassword">
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<input class="btnSubmit" type="Submit" value="Login!">
+					</td>
+				</tr>
+			</table>
+		</form>
+
+		<!-- Sign up table that allows to sign up-->
+		<form method="POST" action="accountSignup.php">
+			<table>
+				<tr>
+					<th colspan="2">No Account?</th>
+				</tr>
+
+				<tr>
+					<td>
+						Username: 
+					</td>
+					<td>
+						<input type="text" name="txtUserName">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						*First Name:
+					</td>
+					<td>
+						<input type="text" name="txtFirstName" required>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						*Last Name:
+					</td>
+					<td>
+						<input type="text" name="txtLastName" required>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						Password:
+					</td>
+					<td>
+						<input type="password" name="txtLoginPassword">
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<input class="btnSubmit" type="submit" value="Create Account!">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

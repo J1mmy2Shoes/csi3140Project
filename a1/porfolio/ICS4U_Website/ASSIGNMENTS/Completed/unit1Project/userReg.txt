@@ -1,0 +1,3 @@
+ADMIN asda dasd PASSWORD 8
+PASS asdsad asdasd PASS 10
+tt tt tt tt 0

@@ -1,0 +1,121 @@
+<!--Hompage of my ICS4U website
+James Billinger
+2/5/2020
+Title: index.html 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="icon" href="images/icon.png">
+		<title>
+			James' Website
+		</title>
+		<font size="+2">
+	</head>
+	<body>
+		<div id="main">
+			<span onclick="openNav()">&#9776; Menu</span>
+		</div>
+		<h1>
+			James Billinger's ICS4U Website 
+		</h1>
+		<hr>
+
+		<div id="parent">
+			<img id="avatar" src="images/avatar.png">
+			<div id="child">
+				<h2 id="life">About my life</h2>
+				<p>
+					Hello world. My name is <em>James Billinger</em>. I am <strong>17 years old</strong>.
+					<br>
+					I live in the north-east section of Stouffville where all the houses are, 
+					and I am not married. I work as an employee for the Township of Whitchurch-Stouffville. 
+					I get home by 11pm every day. I don't drink or smoke becasue that is illegal. 
+					I always get 4 hours of sleep, no matter what. after doing about 1 hour of exercise I go to bed and have no problems sleeping until morning.
+					 I'm a person who likes to live a quiet life. I care not to trouble myself with any enemies, like winning and losing, that would cause me to lose sleep at night. Although if I were to fight, I wouldnt lose to anyone.
+					<br><br><br><br><br><br><br>
+				</p>	
+			</div>
+		</div>
+
+		<div id="fight">
+		    <img src="images/jotarostand.gif" height="200" width="150"><img src="images/diomuda.gif" height="200" width="375">
+		</div>
+
+		<div id="parent2">
+			<div id="child3">
+				<h2 id="heading2">
+					My Second Semester Timetable
+				</h2>
+				<table id="table" border="2" align="center">
+					<tr>
+						<td>Period</td>
+						<td>Class</td>
+						
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>ICS4U</td>	
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Physics</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Lunch</td>	
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Spare</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Calculus</td>
+					</tr>
+				</table>
+			</div>
+			<div id="child2">
+				<h2><em>Assignments</em></h2>
+				<ul id="list">
+					<a href="http://sebnic.info/ChanKowan/ASSIGNMENTS/Completed/unit1Project/"> Unit 1 Assignment</a>
+					<br><br>
+					<a href="ASSIGNMENTS/Completed/unit2Portfolio/index.html">Unit 2 Portfolio Assignment</a>
+					<br><br>
+					<a href="https://sebnic.info/ChanKowan/ASSIGNMENTS/Completed/javaProjectRemake/">Unit 3 Java Console Assignment</a>
+
+
+					<br><br><br>
+				</ul>
+			</div>
+		</div>
+
+		<div id="mySidenav" class="sidenav">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="UNITS/UNIT1/index.html">Unit 1</a>
+  			<a href="UNITS/UNIT2/index.html">Unit 2</a>
+  			<a href="UNITS/UNIT3/index.html">Unit 3</a>
+  			<a href="UNITS/UNIT4/index.html">Unit 4</a>
+  			<a href="UNITS/UNIT5/index.html">Unit 5</a>
+  			<a href="UNITS/UNIT1/LESSON5/form.html"> User Registration</a>
+  			<a href="UNITS/UNIT1/LESSON5/form2.php"> Site Registration</a>
+
+
+		</div>
+
+		<script>
+			function openNav() {
+ 				document.getElementById("mySidenav").style.width = "250px";
+ 				document.getElementById("main").style.marginLeft = "250px";
+ 				document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+			}
+			function closeNav() {
+  				document.getElementById("mySidenav").style.width = "0";
+ 				document.getElementById("main").style.marginLeft= "0";
+  				document.body.style.backgroundColor = "white";
+			}
+		</script>
+	</body>
+</html>
