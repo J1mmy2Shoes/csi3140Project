@@ -6,3 +6,5 @@ The Hospital Triage application helps staff and patients better understand wait 
 
 **Admin Interface:** For triage staff to manage and view the full list of patients.
 **User Interface:** For patients to check their approximate wait times.
+Developer Guide
+Prerequisites
