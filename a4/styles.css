@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background-color: #ffefd5;
@@ -124,7 +124,6 @@ button.delete-btn:hover {
     background-color: #b22222;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     section {
         width: 100%;
