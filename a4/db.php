@@ -1,4 +1,7 @@
 <?php
+
+include 'env.php';
+
 $host = 'localhost';
 $db = 'hospital_triage';
 $user = 'hospital';

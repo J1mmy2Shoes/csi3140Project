@@ -9,11 +9,12 @@
 <body>
     <header>
         <h1>Hospital Triage Application</h1>
+        <a href="admin.html" class="admin_link">Admin Connexion</a>
     </header>
     <main>
         <section class="sign-in">
             <h2>Patient Sign-In</h2>
-            <form action="patient_wait_time.php" method="post">
+            <form action="patient_wait_time.php" id="user-signin" method="post">
                 <label for="name">Please Enter Your Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -22,6 +23,9 @@
                 
                 <button type="submit">Check Wait Time</button>
             </form>
+            <div id="wait-time">
+                <!-- Wait time  -->
+            </div>
         </section>
     </main>
     <footer>
